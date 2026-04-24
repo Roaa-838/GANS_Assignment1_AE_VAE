@@ -1,7 +1,7 @@
 # Representation Learning with Autoencoders
 **DSAI 490 — Assignment 1**
 
-## 📌 Project Overview
+##  Project Overview
 This repository contains the implementation, training, and evaluation of a standard **Autoencoder (AE)** and a **Variational Autoencoder (VAE)**. The models are trained on the **Medical MNIST** dataset to reconstruct grayscale medical images ($64 \times 64$) across six different modalities. 
 
 This project explores the fundamental trade-off between exact reconstruction fidelity (AE) and generative capability/latent space regularization (VAE).
@@ -15,34 +15,12 @@ This project explores the fundamental trade-off between exact reconstruction fid
 
 ---
 
-## 📂 Repository Structure
-Here is a professional and comprehensive `README.md` file tailored specifically to your project, its modular structure, and your results. You can copy and paste this directly into a `README.md` file in your GitHub repository.
-
-***
-
-```markdown
-# Representation Learning with Autoencoders
-**DSAI 490 — Assignment 1**
-
-## 📌 Project Overview
-This repository contains the implementation, training, and evaluation of a standard **Autoencoder (AE)** and a **Variational Autoencoder (VAE)**. The models are trained on the **Medical MNIST** dataset to reconstruct grayscale medical images ($64 \times 64$) across six different modalities. 
-
-This project explores the fundamental trade-off between exact reconstruction fidelity (AE) and generative capability/latent space regularization (VAE).
-
-### Key Features
-* **Modular Architecture:** Clean separation of data pipelines, model definitions, and visualization utilities.
-* **Optimized Data Pipeline:** Fully utilizes the `tf.data` API with caching and prefetching (`AUTOTUNE`) for high-performance, out-of-memory image streaming.
-* **Probabilistic Modeling:** VAE implementation includes the reparameterization trick and ELBO loss (Reconstruction + KL Divergence).
-* **Latent Space Analysis:** Includes t-SNE and PCA visualizations of the 64-dimensional latent space.
-* **Generative Sampling:** Demonstrates the VAE's ability to generate novel medical images by sampling from a standard normal prior $\mathcal{N}(\mathbf{0}, \mathbf{I})$.
-
----
-
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 DSAI490-Assignment1/
 │
+├── GANS_A1_AE_VAE.ipynb       # notebook colab
 ├── dataset.py                 # tf.data pipeline, normalization, and train/val splitting
 ├── models.py                  # TensorFlow/Keras class definitions for AE and VAE
 ├── utils.py                   # Matplotlib/t-SNE visualization functions
@@ -53,7 +31,7 @@ DSAI490-Assignment1/
 
 ---
 
-## 📊 Dataset
+## Dataset
 The models are trained on the **Medical MNIST** dataset, comprising 55,128 grayscale images across six classes:
 `AbdomenCT`, `BreastMRI`, `CXR`, `ChestCT`, `Hand`, `HeadCT`.
 
@@ -61,7 +39,7 @@ The models are trained on the **Medical MNIST** dataset, comprising 55,128 grays
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Running in Google Colab (Recommended)
 1. Upload the `medicalMNIST` dataset to your Google Drive.
@@ -79,7 +57,7 @@ Update the `DATA_ROOT` variable in the main script to point to your local datase
 
 ---
 
-## 📈 Key Results
+## Key Results
 
 | Metric / Feature | Autoencoder (AE) | Variational Autoencoder (VAE) |
 | :--- | :--- | :--- |
